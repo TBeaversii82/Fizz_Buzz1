@@ -104,22 +104,23 @@
                     <!--<li class="nav-item">
                         <a class="nav-link" Git</a>
                     </li>-->
-                    <!--<li class="nav-item">
-                        <a class="nav-link"</a>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://tonybportfolio.netlify.app/">Portfolio</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container auto-center">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5">See for yourself what FizzBuzz does!</h1>
                 <p class="lead">Below, you can input numbers into the correct fields and watch what happens!</p>
                 <ul class="list-unstyled">
-                    <li>The Javascript Exercise</li>
-                    <li>Is placed on this page</li>
+                    <!--<li>The Javascript Exercise</li>
+                    <li>Is placed on this page</li>-->
                 </ul>
             </div>
         </div>
@@ -137,10 +138,12 @@
             <div class="col">
                 <button id="btnFizzBuzz" class="btn btn-primary">Start!</button>
             </div>
-            <!--<a href="" data-toggle="modal" data-target="#exampleModal">Show Loop Iterations</a>-->
         </div>
-        <div class="row">
+
+
+        <div class="custom-">
             <p id="pFizzBuzzOut"></p>
+
         </div>
 
     </div>
@@ -178,63 +181,50 @@
     <!--my custom and any script tags-->
     <script>
 
-        
+
         document.getElementById("btnFizzBuzz").addEventListener("click", function () {
 
-            //number("3)==>3
-            //number("3 f")==> NaN
 
-            //parseInt("3")==>3
-            //parseInt("3 f")==>3
-            //parseInt("f 3")==>NaN
-
-            
-            let fizz = Number(document.getElementById("txtFizzBuzzIn1").value); //3
-            let buzz = Number(document.getElementById("txtFizzBuzzIn2").value); //5
+            let fizz = Number(document.getElementById("txtFizzBuzzIn1").value);
+            let buzz = Number(document.getElementById("txtFizzBuzzIn2").value);
 
 
 
 
-            
+
             let output = DoFizzBuzzFoundation(fizz, buzz);
 
 
 
-           
+
             document.getElementById("pFizzBuzzOut").innerHTML = output;
 
         });
 
-
         
+
+
+
         function DoFizzBuzzFoundation(fizz, buzz) {
-            let output = "";
-            let output2 = "";
+            let output = " ";
+            let output2 = " ";
 
             for (let loop = 1; loop <= 100; loop++) {
                 let fizzRemainder = loop % fizz;
                 let buzzRemainder = loop % buzz;
+                if (fizzRemainder == 0 && buzzRemainder == 0) { output += `<div class="btn btn-dark"+""> FIZZBUZZ  </div>`; }
+                else if (fizzRemainder == 0) { output += `<div class="btn btn-light"+""> FIZZ  </div>`; }
+                else if (buzzRemainder == 0) { output += `<div class="btn btn-warning"+""> BUZZ  </div>`; }
+                else { output += `${loop +""+""} `; }
 
-                if (fizzRemainder == 0 && buzzRemainder == 0) { output += `<div class="btn btn-dark">FIZZBUZZ</div><br />`; }
-                else if (fizzRemainder == 0) { output += `<div class="btn btn-light">FIZZ </div><br />`; }
-                else if (buzzRemainder == 0) { output += `<div class="btn btn-warning">BUZZ </div><br />`; }
-                else { output += `${loop} <br />`; }
 
-
-                output2 += `loop value:${loop}<br/>FR:${loop}%${fizz}=${fizzRemainder}<br/>BR:${loop}%${buzz}=${buzzRemainder}<br/><br/>`;
+                output2 += `loop value:${loop} <br/> FR:${loop}% ${fizz} =$ {fizzRemainder} <br/> BR:$ {loop} % $ {buzz} =$ {buzzRemainder} <br/ ><br/>`;
             }
             let result2 = document.getElementById("inner");
             result2.innerHTML = output2;
 
             return output;
         }
-//1 % 3 == 1
-//2 $ 3 == 2
-//3 % 3 == 0
-//4 % 3 == 1
-//5 % 3 == 2
-//6 % 3 == 0
-
 
 
 
