@@ -105,7 +105,7 @@
                         <a class="nav-link" Git</a>
                     </li>-->
                     <li class="nav-item">
-                        <a class="nav-link" href="https://tonybportfolio.netlify.app/">Portfolio</a>
+                        <a class="nav-link" href="https://tcbeaversportfolio.netlify.app/" target="_blank">Portfolio</a>
                     </li>
                 </ul>
             </div>
@@ -130,11 +130,15 @@
 
         <div class="row">
             <div class="col">
+                <label for="txtFizzBuzzIn1">Enter Fizz Buzz Number One!</label>
                 <input id="txtFizzBuzzIn1" />
             </div>
+
             <div class="col">
+                <label for="txtFizzBuzzIn2">Enter Fizz Buzz Number Two!</label>
                 <input id="txtFizzBuzzIn2" />
             </div>
+
             <div class="col">
                 <button id="btnFizzBuzz" class="btn btn-primary">Start!</button>
             </div>
@@ -167,18 +171,6 @@
         </div>
     </div>
 
-
-
-
-
-
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-    <!--my custom and any script tags-->
     <script>
 
 
@@ -213,8 +205,11 @@
                 let fizzRemainder = loop % fizz;
                 let buzzRemainder = loop % buzz;
                 if (fizzRemainder == 0 && buzzRemainder == 0) { output += `<div class="btn btn-dark"+""> FIZZBUZZ  </div>`; }
-                else if (fizzRemainder == 0) { output += `<div class="btn btn-light"+""> FIZZ  </div>`; }
+
+                else if (fizzRemainder == 0) { output += `<div class="btn btn-danger"+""> FIZZ  </div>`; }
+
                 else if (buzzRemainder == 0) { output += `<div class="btn btn-warning"+""> BUZZ  </div>`; }
+
                 else { output += `${loop +""+""} `; }
 
 
@@ -232,10 +227,10 @@
 
     </script>
 
-
-
-
-
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 
 </body>

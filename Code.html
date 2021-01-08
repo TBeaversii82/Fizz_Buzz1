@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
     <title>Coder Foundry MiniSite Template</title>
-
+    <link href="Contents/prism.css" rel="stylesheet" />
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -20,7 +20,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="/Index.html">Challenge Name Here</a>
+            <a class="navbar-brand" href="/Index.html">Fizz Buzz</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,7 +41,7 @@
                         <a class="nav-link" href="#">Git</a>
                     </li>-->
                     <li class="nav-item">
-                        <a class="nav-link" href="https://tonybportfolio.netlify.app/">Portfolio</a>
+                        <a class="nav-link" href="https://tcbeaversportfolio.netlify.app/" target="_blank">Portfolio</a>
                     </li>
                     <!--<li class="nav-item">
                         <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
@@ -55,12 +55,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">This Page shows your JS code</h1>
-                <p class="lead">You need to use a Syntax Highlighter - Prism.js is default</p>
-                <ul class="list-unstyled">
+                <h1 class="mt-5">Fizz Buzz</h1>
+                <p class="lead">Shown with Prism.js</p>
+                <!--<ul class="list-unstyled">
                     <li>Code with highlighter</li>
                     <li>Will display on this page</li>
-                </ul>
+                </ul>-->
             </div>
         </div>
     </div>
@@ -70,6 +70,52 @@
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <pre>
+                <code class="language-js line-numbers">
+                document.getElementById("btnFizzBuzz").addEventListener("click", function () 
+                let fizz=Number(document.getElementById("txtFizzBuzzIn1").value);
+                let buzz=Number(document.getElementById("txtFizzBuzzIn2").value);
+                let output=DoFizzBuzzFoundation(fizz, buzz);
+                document.getElementById("pFizzBuzzOut").innerHTML=output;
+                );
+                function DoFizzBuzzFoundation(fizz, buzz) 
+                let output=" " ;
+                let output2=" " ;
+                for (let loop=1; loop <= 100; loop++) 
+                    let fizzRemainder = loop % fizz;
+                    let buzzRemainder = loop % buzz;
+                    if (fizzRemainder == 0 && buzzRemainder == 0) { output += ` class="btn btn-dark" +""> 
+                    FIZZBUZZ  </>`; 
+                    else if (fizzRemainder == 0) { output += ` class="btn btn-light" +""> FIZZ  </>`; 
+                    else if (buzzRemainder == 0) { output += ` class="btn btn-warning" +""> BUZZ  </>`; 
+                    else { output += `${loop + "" + ""} `; }
+
+
+                    output2 += `loop value:${loop} <br /> FR:${loop}% ${fizz} =$ {fizzRemainder} <br /> BR:$ {loop} % $ {buzz} 
+                =$ {buzzRemainder} <br /><br />`;
+                        
+                let result2 = document.getElementById("inner");
+                result2.innerHTML = output2;
+
+                return output;
+                </code>
+
+                </pre>
+                    
+
+
+
+
+                <script src="Scripts/prism.js"></script>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
