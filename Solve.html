@@ -124,30 +124,25 @@
                 </ul>
             </div>
         </div>
-
-
         <hr />
-
-        <div class="row">
-            <div class="col">
-                <label for="txtFizzBuzzIn1">Enter Fizz Buzz Number One!</label>
-                <input id="txtFizzBuzzIn1" />
-            </div>
-
-            <div class="col">
-                <label for="txtFizzBuzzIn2">Enter Fizz Buzz Number Two!</label>
-                <input id="txtFizzBuzzIn2" />
-            </div>
-
-            <div class="col">
-                <button id="btnFizzBuzz" class="btn btn-primary">Start!</button>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <label for="txtFizzBuzzIn1">Enter Fizz Buzz Number One!</label>
+                    <input id="txtFizzBuzzIn1" />
+                </div>
+                <div class="col">
+                    <label for="txtFizzBuzzIn2">Enter Fizz Buzz Number Two!</label>
+                    <input id="txtFizzBuzzIn2" />
+                </div>
             </div>
         </div>
-
-
+        <div class="col text-center">
+            <button id="btnFizzBuzz" class="btn btn-primary">Start!</button>
+        </div>
+        <br />
         <div class="custom-">
             <p id="pFizzBuzzOut"></p>
-
         </div>
 
     </div>
@@ -193,7 +188,7 @@
 
         });
 
-        
+
 
 
 
@@ -205,12 +200,12 @@
                 let fizzRemainder = loop % fizz;
                 let buzzRemainder = loop % buzz;
                 if (fizzRemainder == 0 && buzzRemainder == 0) { output += `<div class="btn btn-dark"+""> FIZZBUZZ  </div>`; }
-
+                
                 else if (fizzRemainder == 0) { output += `<div class="btn btn-danger"+""> FIZZ  </div>`; }
-
+    
                 else if (buzzRemainder == 0) { output += `<div class="btn btn-warning"+""> BUZZ  </div>`; }
 
-                else { output += `${loop +""+""} `; }
+                else { output += `${loop + "" + ""} `; }
 
 
                 output2 += `loop value:${loop} <br/> FR:${loop}% ${fizz} =$ {fizzRemainder} <br/> BR:$ {loop} % $ {buzz} =$ {buzzRemainder} <br/ ><br/>`;
